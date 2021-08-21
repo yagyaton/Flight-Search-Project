@@ -1,7 +1,7 @@
 import requests
 from flight_search import FlightSearch
 
-token="ayomrwhite"
+token="yoursheetytoken"
 bearer_headers={
     "Authorization": f"Bearer {token}"
 }
