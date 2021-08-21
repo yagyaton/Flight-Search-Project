@@ -1,11 +1,13 @@
 from twilio.rest import Client
 import smtplib
 
-id="ithadtobeton@yahoo.com"
-password="ndtshdcbdvvwwced"
+#Code won't run, all keys and numbers are removed. Use your own if you need to.
+
+id=yahooid
+password=yahoopass
 yahooport="smtp.mail.yahoo.com"
-account_sid='ACf857a33fe35b711b4be39f7fabd7d58b'
-auth_token='236a58c797e5d029228f648556ba2d0a'
+account_sid=sid
+auth_token=auth
 
 class NotificationManager:
     #This class is responsible for sending notifications with the deal flight details.
@@ -21,8 +23,8 @@ class NotificationManager:
         message = client.messages \
             .create(
                      body=f"\nLow Price Alert!\n{mainbody}".encode('utf-8'),
-                     from_='+16822551650',
-                     to='+91 9460186060'
+                     from_='twiliono',
+                     to='my_no'
                  )
 
         print(message.status)
